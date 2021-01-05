@@ -69,7 +69,7 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_info__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_info_js__ = __webpack_require__(2);
 
 //1.使用commonjs的模块化规范
 const {add,nul} = __webpack_require__(1)  
@@ -79,9 +79,9 @@ console.log(nul(20,30));
 //2使用es6的模块化规范
   
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_info__["c" /* name */]);
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_info__["a" /* age */]);  
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_info__["b" /* height */]);  
+console.log(__WEBPACK_IMPORTED_MODULE_0__js_info_js__["c" /* name */]);
+console.log(__WEBPACK_IMPORTED_MODULE_0__js_info_js__["a" /* age */]);  
+console.log(__WEBPACK_IMPORTED_MODULE_0__js_info_js__["b" /* height */]);  
 
 //3.依赖css文件  
 __webpack_require__(3)

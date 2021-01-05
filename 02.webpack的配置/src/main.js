@@ -5,7 +5,7 @@ console.log(add(20,30));
 console.log(nul(20,30));  
 
 //2使用es6的模块化规范
-import {name,age,height} from "./js/info";  
+import {name,age,height} from "./js/info.js";  
 
 console.log(name);
 console.log(age);  
