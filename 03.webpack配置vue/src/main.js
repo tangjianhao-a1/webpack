@@ -23,11 +23,12 @@ document.writeln('<h2>你好啊</h2>')
 import Vue from 'vue'  
 //exprot default导出后面可自定义命名接收   
 //用模块化的方式把组件抽取成一个文件导出，入口文件接收
-import APP from './vue/app.js'
+//import App from './vue/app.js'    
+import App from './vue/App.vue'
  new Vue({
   el: '#app', 
-  template: '<APP/>', 
+  template: '<App/>', 
   components: {
-    APP
+    App
   }
 })
