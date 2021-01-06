@@ -664,10 +664,14 @@ var _vue = __webpack_require__(6);
 
 var _vue2 = _interopRequireDefault(_vue);
 
+var _app = __webpack_require__(9);
+
+var _app2 = _interopRequireDefault(_app);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //1.使用commonjs的模块化规范
-var _require = __webpack_require__(9),
+var _require = __webpack_require__(10),
     add = _require.add,
     nul = _require.nul;
 
@@ -682,20 +686,23 @@ console.log(_info.age);
 console.log(_info.height);
 
 //3.依赖css文件  
-__webpack_require__(10);
+__webpack_require__(11);
 
 //4.依赖less文件  
-__webpack_require__(14);
+__webpack_require__(15);
 document.writeln('<h2>你好啊</h2>');
 
 //5.依赖vue   
 //引用  
 
+//exprot default导出后面可自定义命名接收   
+//用模块化的方式把组件抽取成一个文件导出，入口文件接收
 
-var vm = new _vue2.default({
+new _vue2.default({
   el: '#app',
-  data: {
-    message: 'Hello Webpack'
+  template: '<APP/>',
+  components: {
+    APP: _app2.default
   }
 });
 
@@ -12081,6 +12088,26 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  template: '\n  <div>\n  <h2>{{message}}</h2>  \n  <button>\u6309\u94AE</button>  \n  <h2>{{name}}</h2>\n  </div>\n  ',
+  data: function data() {
+    return {
+      message: 'Hello Webpack',
+      name: 'coderwhy'
+    };
+  }
+};
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 function add(num1, num2) {
   return num1 + num2;
 };
@@ -12094,14 +12121,14 @@ module.exports = {
 };
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css__);
 
             
@@ -12118,19 +12145,19 @@ var update = __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime
 /* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css___default.a.locals || {});
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
 // Imports
-var getUrl = __webpack_require__(12);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(13));
+var getUrl = __webpack_require__(13);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(14));
 // Module
 exports.push([module.i, "body {\r\n /*  background-color: red; */  \r\n background: url(" + ___CSS_LOADER_URL___0___ + ")\r\n}", ""]);
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12157,20 +12184,20 @@ module.exports = function (url, needQuotes) {
 };
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/BG3.572ca041.png";
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_special_less__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_special_less__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_special_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_special_less__);
 
             
@@ -12187,7 +12214,7 @@ var update = __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime
 /* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_special_less___default.a.locals || {});
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
