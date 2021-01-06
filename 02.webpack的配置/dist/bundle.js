@@ -60,89 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_info_js__ = __webpack_require__(2);
-
-//1.使用commonjs的模块化规范
-const {add,nul} = __webpack_require__(1)  
-console.log(add(20,30));  
-console.log(nul(20,30));  
-
-//2使用es6的模块化规范
-  
-
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_info_js__["c" /* name */]);
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_info_js__["a" /* age */]);  
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_info_js__["b" /* height */]);  
-
-//3.依赖css文件  
-__webpack_require__(3)
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-function add(num1,num2) {
-  return num1 + num2
-};  
-
-function nul(num1,num2) {
-  return num1 * num2
-}  
-module.exports = {
-  add,
-  nul,
-}
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-const name = 'why';
-/* harmony export (immutable) */ __webpack_exports__["c"] = name;
-   
-const age = 18;
-/* harmony export (immutable) */ __webpack_exports__["a"] = age;
-  
-const height = 1.88;
-/* harmony export (immutable) */ __webpack_exports__["b"] = height;
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css__);
-
-            
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js___default()(__WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css___default.a, options);
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css___default.a.locals || {});
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -417,16 +339,7 @@ module.exports = function (list, options) {
 };
 
 /***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(6)(false);
-// Module
-exports.push([module.i, "body {\r\n  background-color: red;\r\n}", ""]);
-
-
-/***/ }),
-/* 6 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -520,6 +433,130 @@ function toComment(sourceMap) {
   var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
   return "/*# ".concat(data, " */");
 }
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_info_js__ = __webpack_require__(4);
+
+//1.使用commonjs的模块化规范
+const {add,nul} = __webpack_require__(3)  
+console.log(add(20,30));  
+console.log(nul(20,30));  
+
+//2使用es6的模块化规范
+  
+
+console.log(__WEBPACK_IMPORTED_MODULE_0__js_info_js__["c" /* name */]);
+console.log(__WEBPACK_IMPORTED_MODULE_0__js_info_js__["a" /* age */]);  
+console.log(__WEBPACK_IMPORTED_MODULE_0__js_info_js__["b" /* height */]);  
+
+//3.依赖css文件  
+__webpack_require__(5)  
+
+//4.依赖less文件  
+__webpack_require__(7)  
+document.writeln('<h2>你好啊</h2>')
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+function add(num1,num2) {
+  return num1 + num2
+};  
+
+function nul(num1,num2) {
+  return num1 * num2
+}  
+module.exports = {
+  add,
+  nul,
+}
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+const name = 'why';
+/* harmony export (immutable) */ __webpack_exports__["c"] = name;
+   
+const age = 18;
+/* harmony export (immutable) */ __webpack_exports__["a"] = age;
+  
+const height = 1.88;
+/* harmony export (immutable) */ __webpack_exports__["b"] = height;
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css__);
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js___default()(__WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css___default.a, options);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_normal_css___default.a.locals || {});
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// Module
+exports.push([module.i, "body {\r\n  background-color: red;\r\n}", ""]);
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_special_less__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_special_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_special_less__);
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __WEBPACK_IMPORTED_MODULE_0__node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js___default()(__WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_special_less___default.a, options);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_1__node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_special_less___default.a.locals || {});
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// Module
+exports.push([module.i, "body {\n  font-size: 50px;\n  color: orange;\n}\n", ""]);
+
 
 /***/ })
 /******/ ]);
