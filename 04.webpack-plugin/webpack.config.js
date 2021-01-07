@@ -44,7 +44,7 @@ module.exports = {
               //当加载的图片，大于limit时，需要使用file-loader模块进行加载
               limit: 10000,  //图片大小设定
               //新生成图片路径和命名
-              name: 'img/[name].[hash:8].[ext]'
+              name: 'img/[name].[hash:3].[ext]'
             },
           }
         ]
