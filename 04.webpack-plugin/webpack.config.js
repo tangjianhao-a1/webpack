@@ -34,9 +34,9 @@ module.exports = {
           loader: "less-loader" // compiles Less to CSS
         }]
       },
-          //配置图片
+      //配置图片
       {
-        test: /\.(png|jpg|gif)$/, 
+        test: /\.(png|jpg|gif)$/,
         use: [
           {
             loader: 'url-loader',
@@ -50,7 +50,7 @@ module.exports = {
           }
         ]
       },
-       //配置babel转换ES6变ES5语法
+      //配置babel转换ES6变ES5语法
       {
         test: /\.js$/,
         //exclude:排除，  
@@ -65,16 +65,16 @@ module.exports = {
       },
 
       {
-        test:/\.vue$/,  
+        test: /\.vue$/,
         use: ['vue-loader']
       }
     ]
-  },  
+  },
   /* vue构建会产生runtime-only和runtime-compiler两个版本 
-      runtime-only编译不了template需要如下配置*/  
-   resolve: {//解决路径问题
-     //引出时可以不加后缀名
-     extensions: ['.js','.css','.vue'], 
+      runtime-only编译不了template需要如下配置*/
+  resolve: {//解决路径问题
+    //引出时可以不加后缀名
+    extensions: ['.js', '.css', '.vue'],
     //alias: 别名  
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
@@ -82,11 +82,15 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.BannerPlugin('最终版权归aaa所有'),  
+    new webpack.BannerPlugin('最终版权归aaa所有'),
     new HtmlWebpackPlugin({
       template: 'index.html'
-    }), 
-    new  UglifyjsWebpackPlugin()
-  ]
+    }),
+    new UglifyjsWebpackPlugin()
+  ],
+  devServer: {
+    contentBase: './dist',  
+    inline: true,
+  }
 
 }
