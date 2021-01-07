@@ -1,7 +1,8 @@
 //配置入口和出口文件
 const path = require('path')  //引入路径
 const webpack = require('webpack')  //引入webpack  
-const HtmlWebpackPlugin = require('html-webpack-plugin')  //引入插件
+const HtmlWebpackPlugin = require('html-webpack-plugin')  //引入插件  
+const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   /* 入口 */
@@ -84,7 +85,8 @@ module.exports = {
     new webpack.BannerPlugin('最终版权归aaa所有'),  
     new HtmlWebpackPlugin({
       template: 'index.html'
-    })
+    }), 
+    new  UglifyjsWebpackPlugin()
   ]
 
 }
