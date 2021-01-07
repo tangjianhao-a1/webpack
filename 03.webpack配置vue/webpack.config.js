@@ -70,6 +70,8 @@ module.exports = {
   /* vue构建会产生runtime-only和runtime-compiler两个版本 
       runtime-only编译不了template需要如下配置*/  
    resolve: {
+     //引出时可以不加后缀名
+     extensions: ['.js','.css','.vue'], 
     //alias: 别名  
     alias: {
       'vue$': 'vue/dist/vue.esm.js'

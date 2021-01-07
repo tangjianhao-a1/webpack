@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import Cpn from './Cpn.vue'
-import Input from './Input.vue'
+import Cpn from './Cpn'
+import Input from './Input'
 export default {  
   components: {
     Cpn,  
