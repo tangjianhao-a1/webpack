@@ -2,7 +2,6 @@
 const path = require('path')  //引入路径
 const webpack = require('webpack')  //引入webpack  
 const HtmlWebpackPlugin = require('html-webpack-plugin')  //引入插件  
-const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   /* 入口 */
