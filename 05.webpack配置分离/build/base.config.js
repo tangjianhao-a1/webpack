@@ -9,7 +9,7 @@ module.exports = {
   entry: './src/main.js',
   /* 出口 */
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',  //打包文件名
     //publicPath: 'dist/'  //url路径的相关设置
   },
